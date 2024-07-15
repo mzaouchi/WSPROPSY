@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Child from './Components/Child';
 
 function App() {
+  var name = "Achref"
+  var age = 30
+  var pays = ["Tunisie","Maroc","Jardin","Czech"]
+  var product = {
+    productName : "Jordan",
+    size : 42,
+    color : "Red",
+    price : 120,
+    town : {
+      city :"LA",
+      cp : 1145
+    }    
+  }
+
+  var track = "Fullstack JS"
+
+  const SayHello =()=> alert("Hello ya cha3b")
+
+  const hello=(a)=> alert(`Hello ${a}`)
+
+  var show = false
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Workshop Props</h1>
+      <Child name={name} mahmoud={age} pays={pays} product={product} track={track} SayHello={SayHello} hello={hello} show={show}>
+        <h1>GOMYCODE</h1>
+        <h2>Youssef</h2>
+        <h3>Jardin de Carthage</h3>
+      </Child>
     </div>
   );
 }
